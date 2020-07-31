@@ -1,4 +1,4 @@
-package functional;
+package functional.tracking;
 
 @FunctionalInterface
 public interface ThrowingRunnable {

@@ -1,4 +1,4 @@
-package proxy;
+package proxy.business;
 
 public interface Foo {
 

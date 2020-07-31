@@ -1,4 +1,4 @@
-package functional;
+package functional.business;
 
 public class Foo {
 

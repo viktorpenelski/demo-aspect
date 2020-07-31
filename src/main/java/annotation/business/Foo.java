@@ -1,4 +1,6 @@
-package annotation;
+package annotation.business;
+
+import annotation.tracking.Timed;
 
 public class Foo {
 
