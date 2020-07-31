@@ -71,7 +71,7 @@
 
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>timing.Main</mainClass>
+                            <mainClass>annotation.Main</mainClass>
                         </manifest>
                         <manifestEntries>
                             <mode>development</mode>

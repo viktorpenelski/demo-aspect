@@ -1,4 +1,4 @@
-package timing;
+package annotation;
 
 public class Main {
 

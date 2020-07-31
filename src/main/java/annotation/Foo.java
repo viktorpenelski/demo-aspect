@@ -1,4 +1,4 @@
-package timing;
+package annotation;
 
 public class Foo {
 
@@ -11,8 +11,7 @@ public class Foo {
 
     @Timed("some.other.key")
     public void baz() {
-        System.out.println("starting baz");
-        System.out.println("ending baz");
+            System.out.println("hi from baz");
     }
 
 }

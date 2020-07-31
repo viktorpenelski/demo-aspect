@@ -1,4 +1,4 @@
-package timing;
+package annotation;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -10,11 +10,6 @@ import java.util.concurrent.TimeUnit;
 @Aspect
 public class TimedMethodAspect {
 
-    TimedMethodAspect() {
-        System.out.println("Instantiating at: " + System.currentTimeMillis());
-        System.out.println("Instantiating from: " + this.getClass().getClassLoader());
-    }
-
     // ensure pointcut is called when annotated method is about to be executed
     // if not specified, pointcut triggers twice - once for "calling" and once for "executing"
     @Pointcut("@annotation(timed) && execution(* *(..))")
@@ -25,7 +20,6 @@ public class TimedMethodAspect {
     public Object around(ProceedingJoinPoint pjp,
                          Timed timed) throws Throwable {
         long start = System.nanoTime();
-        System.out.println("Starting at: " + TimeUnit.NANOSECONDS.toMillis(start));
         try {
             return pjp.proceed();
         } finally {
